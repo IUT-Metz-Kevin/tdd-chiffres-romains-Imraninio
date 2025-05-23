@@ -7,15 +7,16 @@ function RomainToNumeral(romain: string): number {
     let indexRomain = 0;
     let total = 0;
     let preced = 0;
-    for(let i = 0; i < romain.length; i++){
+    for(let i = romains.length - 1; i >= 0; i--){
         indexRomain = romains.findIndex(rom => rom === romain[i]);
-        if(numer[indexRomain] >= preced){
-            total += numer[indexRomain]; 
+        let val = numer[indexRomain];
+        if(val >= preced){
+            total += val; 
         }
         else{
-            total -= preced;
+            total -= val;
         }
-        preced = numer[indexRomain];
+        preced = val
     }
     return total;
 }
