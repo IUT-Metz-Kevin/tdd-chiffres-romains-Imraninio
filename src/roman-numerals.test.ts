@@ -12,6 +12,6 @@ function RomainToNumeral(romain: string): number {
     else return 0;
 }
 
-test.each([['I', 1], ['II', 2], ['III', 3], ['IV', 4]])('%s doit retourner %s', (input, expected) => {
+test.each([['I', 1], ['II', 2], ['III', 3], ['IV', 4], ['V', 5]])('%s doit retourner %s', (input, expected) => {
   expect(RomainToNumeral(input)).toBe(expected);
 });
