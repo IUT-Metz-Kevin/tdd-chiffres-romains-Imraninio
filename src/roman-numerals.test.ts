@@ -9,6 +9,7 @@ function RomainToNumeral(romain: string): number {
     if(romain === 'II') return 2;
     if(romain === 'III') return 3;
     if(romain === 'IV') return 4;
+    if(romain === 'V') return 5;
     else return 0;
 }
 
