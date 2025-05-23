@@ -7,8 +7,8 @@ function RomainToNumeral(romain: string): number {
     let indexRomain = 0;
     let total = 0;
     let preced = 0;
-    for(let i = romains.length - 1; i >= 0; i--){
-        indexRomain = romains.findIndex(rom => rom === romain[i]);
+    for(let i = romain.length - 1; i >= 0; i--){
+        indexRomain = romains.indexOf(romain[i])
         let val = numer[indexRomain];
         if(val >= preced){
             total += val; 
@@ -21,6 +21,6 @@ function RomainToNumeral(romain: string): number {
     return total;
 }
 
-test.each([['I', 1], ['II', 2], ['III', 3], ['V', 5], ['IV', 4],])('%s doit retourner %s', (input, expected) => {
+test.each([['I', 1], ['II', 2], ['III', 3], ['V', 5], ['IV', 4]])('%s doit retourner %s', (input, expected) => {
   expect(RomainToNumeral(input)).toBe(expected);
 });
