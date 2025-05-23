@@ -8,7 +8,8 @@ function RomainToNumeral(romain: string): number {
     if (romain === 'I') return 1;
     if(romain === 'II') return 2;
     if(romain === 'III') return 3;
-  else return 0;
+    if(romain === 'IV') return 4;
+    else return 0;
 }
 
 test.each([['I', 1], ['II', 2], ['III', 3], ['IV', 4]])('%s doit retourner %s', (input, expected) => {
