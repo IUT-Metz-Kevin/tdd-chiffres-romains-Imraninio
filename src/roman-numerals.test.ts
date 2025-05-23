@@ -4,9 +4,19 @@ const romains = ["I", "V", "X", "L", "C", "D", "M"];
 const numer = [1, 5, 10, 50, 100, 500, 1000];
 
 function RomainToNumeral(romain: string): number {
-    let total = 0
+    let total = 0;
+    let preced = 0;
+    let indexRomain = 0;
+
     for(let i = 0; romain.length; i++){
-        if(romain[i] === "I") total++
+        indexRomain = romains.findIndex(rom => rom === romain[i]);
+        if(numer[indexRomain] > preced){
+            total+= numer[indexRomain]; 
+        }
+        else{
+            total -= preced
+        }
+        preced = numer[indexRomain];
     }
     return total;
 }
