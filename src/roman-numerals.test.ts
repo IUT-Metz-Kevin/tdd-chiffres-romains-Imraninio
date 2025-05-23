@@ -6,6 +6,7 @@ const numer = [1, 5, 10, 50, 100, 500, 1000];
 function RomainToNumeral(romain: string): number {
   if (romain === 'I') return 1;
   if(romain === 'II') return 2;
+  if(romain === 'III') return 3;
   else return 0;
 }
 
