@@ -2,6 +2,7 @@ import { it, expect } from 'vitest';
 
 function RomainToNumeral(romain: string): number {
   if (romain === 'I') return 1;
+  if(romain === 'II') return 2;
   else return 0;
 }
 
